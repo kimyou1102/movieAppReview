@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './routes/Home';
 import Detail from './routes/Detail';
@@ -6,16 +6,20 @@ import Detail from './routes/Detail';
 function App() {  
   // require('react-dom');
   // window.React2 = require('react');
-  console.log(window.React1 === window.React2);
+  // console.log(process.env.PUBLIC_URL);
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/movie/:id" element={<Detail />} />
-        <Route path="/" element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/movie/:id"} element={<Detail />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
 
 export default App;
+
+
+// <Route path={`${process.env.PUBLIC_URL}/movie/:id`}  element={<Detail />} />
+// <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
