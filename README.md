@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# 구현사항
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+react를 이용해 영화 api를 받아와 렌더해주며 영화 정보를 보여주는 기능
 
 ## Available Scripts
 
